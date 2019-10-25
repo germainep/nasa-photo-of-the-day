@@ -31,7 +31,7 @@ useEffect(()=> {
 
   return () => apod
     
-},[])
+},[apod])
   return(
     <div className='container'>
       <TitleComponent title={apod.title}/>
