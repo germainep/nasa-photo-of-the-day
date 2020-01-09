@@ -4,6 +4,7 @@ import ImageComponent from '../ImageComponent/ImageComponent';
 import TitleComponent from '../TitleComponent/TitleComponent';
 import axios from 'axios';
 import SummaryComponent from '../SummaryComponent/SummaryComponent';
+import { Container, Card, CardBody} from 'reactstrap';
 
 function PhotoFrame() {
 
@@ -31,14 +32,18 @@ useEffect(()=> {
 
   return () => apod
     
-},[apod])
-  return(
-    <div className='container'>
-      <TitleComponent title={apod.title}/>
-      <ImageComponent url={apod.hdurl} title={apod.title}/>
-      <SummaryComponent summary={apod.explanation}/>
-    </div>
-  )
+},[])
+  return (
+    <Container>
+      <Card>
+          <TitleComponent title={apod.title} />
+        <ImageComponent url={apod.hdurl} title={apod.title} />
+        <CardBody>
+        <SummaryComponent summary={apod.explanation} />
+        </CardBody>
+      </Card>
+    </Container>
+  );
 }
 
 export default PhotoFrame;

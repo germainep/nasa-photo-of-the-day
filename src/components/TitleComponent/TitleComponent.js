@@ -1,8 +1,9 @@
 import React from 'react';
+import {CardTitle} from 'reactstrap';
 
 function TitleComponent(props) {
   return(
-  <h1>{props.title}</h1>
+  <CardTitle>{props.title}</CardTitle>
   )
 }
 export default TitleComponent

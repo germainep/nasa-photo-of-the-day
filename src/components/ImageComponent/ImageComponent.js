@@ -1,9 +1,10 @@
 import React from 'react';
+import {CardImg} from 'reactstrap'
 
 function ImageComponent(props) {
 
   return (
-    <img src={props.url} alt={props.title}/>
+    <CardImg src={props.url} alt={props.title}/>
   )
 }
 
